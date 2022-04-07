@@ -8,6 +8,7 @@ import com.rolex.mall.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 
 @RestController
@@ -15,9 +16,8 @@ import java.util.HashMap;
 @RequestMapping("/login")
 public class LoginController {
 
-    //idea
-    @Autowired
-    private UserMapper userMapper;
+    @Resource
+    UserMapper userMapper;
 
     /**
      * 登录接口
@@ -65,7 +65,6 @@ public class LoginController {
         userMapper.insert(u);
         return Result.parse("注册成功" , Result.SUCCESS_CODE);
     }
-
 
 
 
