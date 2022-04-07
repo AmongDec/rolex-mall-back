@@ -19590,10 +19590,6 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (400000, '先生', '马小明', '日本', '17673130854', 'xiaoshuang', '射手座', '{\"material\":\"宝石\",\"identify\":\"学生\",\"mould\":\"[1, 2, 8, 11]\"}', '你小学班主任的名字？', '易都军');
-INSERT INTO `user` VALUES (400001, '先生', '张老三', '澳洲', '18707496625', '345', '白羊座', '{\"material\":\"宝石\",\"identify\":\"名流\",\"mould\":\"[2, 9]\"}', '你小学班主任的名字？', '李子');
-INSERT INTO `user` VALUES (400002, '先生', 'Sakura', '内蒙古自治区-乌兰察布市-兴和县', '17674508880', 'qwe123', '水瓶座', NULL, '你最近暗恋的人是谁', '3');
-INSERT INTO `user` VALUES (400003, '先生', 'oyou', '天津市-天津市-河东区', '17674508880', 'qwe123', '白羊座', NULL, '你小学班主任的名字', '粉色');
 INSERT INTO `user` VALUES (400004, '先生', '明天会更好', '湖南省-湘潭市-岳塘区', '17674508880', 'qwe123', '双鱼座', NULL, '你小学班主任的名字', '粉色');
 INSERT INTO `user` VALUES (400005, NULL, NULL, NULL, '17673130853', '123456', NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES (400006, NULL, NULL, NULL, '17676563576', '123456', NULL, NULL, NULL, NULL);
