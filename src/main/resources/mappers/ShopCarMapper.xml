@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.montnets.mtcsto.Mapper.shopcar.ShopCarMapper">
+    <select id="findcar" resultMap="goodcarmap" parameterType="com.rolex.mall.pojo.order.OrderVO">
+        select g.* , m.mc_number
+        from car c , goods g , midcar m
+        where c.c_id = m.c_id and c.u_id = ${vo.uid} and m.g_id = g.g_id
+    </select>
+
+    <resultMap id="goodcarmap" type="com.rolex.mall.pojo.shopcar.GoodCar">
+        <id column="g_id" property="gId"/>
+        <result column="g_name" property="gName" />
+        <result column="g_price" property="gPrice" />
+        <result column="g_version" property="gVersion" />
+        <result column="g_material" property="gMaterial" />
+        <result column="cls_id" property="clsId" />
+        <result column="g_state" property="gState" />
+        <result column="g_main_pic" property="gMainPic" />
+        <result column="g_bg_pic" property="gBgPic" />
+        <result column="mc_number" property="mcNumber" />
+    </resultMap>
+
+    <delete id="deleteByVo" parameterType="com.rolex.mall.pojo.collect.CollectVO">
+        delete from midcar where g_id = ${vo.gid} and c_id =
+        (select c_id from car where u_id = ${vo.uid})
+    </delete>
+
+</mapper>

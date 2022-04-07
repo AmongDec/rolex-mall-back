@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.montnets.mtcsto.Mapper.order.OrderMapper">
+    <select id="findByOid" resultMap="goodmap">
+        select g.* , m.mo_number mo_number
+        from midorder m,goods g
+        where m.g_id = g.g_id and m.o_id = ${oid}
+    </select>
+
+    <resultMap id="goodmap" type="com.rolex.mall.pojo.good.Good">
+        <id column="g_id" property="gId"/>
+        <result column="g_name" property="gName" />
+        <result column="g_price" property="gPrice" />
+        <result column="g_version" property="gVersion" />
+        <result column="g_material" property="gMaterial" />
+        <result column="cls_id" property="clsId" />
+        <result column="g_state" property="gState" />
+        <result column="g_main_pic" property="gMainPic" />
+        <result column="g_bg_pic" property="gBgPic" />
+        <result column="mo_number" property="moNumber" />
+    </resultMap>
+
+</mapper>

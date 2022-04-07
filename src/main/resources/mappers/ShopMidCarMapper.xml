@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.montnets.mtcsto.Mapper.shopcar.ShopMidCarMapper">
+    <update id="updatemcnumber">
+        update midcar set mc_number = mc_number+1
+        where c_id = ${cid} and g_id = ${gid}
+    </update>
+
+</mapper>

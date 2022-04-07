@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.montnets.mtcsto.Mapper.collect.CollectMapper">
+    <select id="findCollectList" resultMap="goodmap" parameterType="com.rolex.mall.pojo.order.OrderVO">
+        select g.*
+        from collect c , goods g
+        where c.u_id = ${vo.uid} and c.g_id = g.g_id
+    </select>
+
+    <resultMap id="goodmap" type="com.rolex.mall.pojo.good.GoodTable">
+        <id column="g_id" property="gId"/>
+        <result column="g_name" property="gName" />
+        <result column="g_price" property="gPrice" />
+        <result column="g_version" property="gVersion" />
+        <result column="g_material" property="gMaterial" />
+        <result column="cls_id" property="clsId" />
+        <result column="g_state" property="gState" />
+        <result column="g_main_pic" property="gMainPic" />
+        <result column="g_bg_pic" property="gBgPic" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.montnets.mtcsto.Mapper.good.GoodMapper">
+    <insert id="addonedetail">
+        INSERT INTO `detail`
+        VALUES (${did}, ${id}, '中层表壳，旋入式底盖及上链表冠', '41毫米', '黄金钢（蚝式钢与18ct黄金的组合）', '三角坑纹', '旋入式双扣锁双重防水系统', '抗刮损蓝水晶，小窗凸透镜放大日历', '防水深达100米/330英尺', '自动上链机械恒动机芯', '每天平均正负两秒以内（机芯装进表壳后）', '中央时、分及秒针；快调瞬跳日历；秒针暂停功能以准确调校时间', '藉恒动摆陀作双向自动上链', '约70小时', '纪念型，五格链节', '黄金钢（蚝式钢与18ct黄金的组合）', '香槟色', '易读Chromalight显示配长效蓝色夜光物料', '超卓天文台精密时计认证：');
+    </insert>
+
+    <insert id="addone">
+        INSERT INTO `goods` VALUES (${id}, '蚝式恒动星期日历型36', 655356.2, '蚝式，36毫米', '黄金', 3000000, 1,#{mainpic}, '6000000bg.webp');
+    </insert>
+
+</mapper>
